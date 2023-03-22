@@ -63,6 +63,30 @@ export default {
   flex-direction: column;
   padding: 0 12px;
 
+  @media screen and (min-width: 768px){
+    padding: 0 22px;
+  }
+
+  @media screen and (min-width: 1024px){
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: 1280px){
+    padding: 0 60px;
+  }
+
+  @media screen and (min-width: 1440px){
+    padding: 0 80px;
+  }
+
+  &__title {
+    @media screen and (min-width: 1024px){
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 56px;
+    }
+  }
+
   &__cards {
     display: flex;
     flex-direction: column;

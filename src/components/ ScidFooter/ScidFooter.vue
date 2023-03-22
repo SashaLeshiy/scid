@@ -1,3 +1,4 @@
+<!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
 <template>
   <section class="scid-footer">
@@ -30,9 +31,31 @@
         </button>
       </div>
       <div class="scid-footer__subscribe-icons">
-        <img src="@/assets/socila/insta.png" alt="" class="scid-footer__subscribe-icons--elem"/>
-        <img src="@/assets/socila/vk.png" alt="" class="scid-footer__subscribe-icons--elem"/>
-        <img src="@/assets/socila/facebook.png" alt="" class="scid-footer__subscribe-icons--elem"/>
+        <a
+          href="https://insta.com"
+          class="scid-footer__link"
+          target="_blank"
+        >
+          <img src="@/assets/socila/insta.png" alt="" class="scid-footer__subscribe-icons--elem"/>
+        </a>
+        <a
+          href="https://vk.com"
+          class="scid-footer__link"
+          target="_blank"
+        >
+          <img src="@/assets/socila/vk.png" alt="" class="scid-footer__subscribe-icons--elem"/>
+        </a>
+        <a
+          href="https://facebook.com"
+          class="scid-footer__link"
+          target="_blank"
+        >
+          <img
+            src="@/assets/socila/facebook.png"
+            alt=""
+            class="scid-footer__subscribe-icons--elem"
+          />
+        </a>
       </div>
     </div>
     <div class="scid-footer__copyright">
@@ -81,17 +104,20 @@ export default {
 
   @media screen and (min-width: 768px){
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 32px;
   }
 
   @media screen and (min-width: 1024px){
     grid-template-columns: max-content 1fr 1fr 1fr;
     grid-gap: 48px;
     padding: 60px 80px 6px;
+    margin-top: 44px;
   }
 
   @media screen and (min-width: 1280px){
     grid-template-columns: max-content 1fr 1fr 1fr max-content;
     grid-gap: 34px;
+    margin-top: 64px;
   }
 
   &__block {
@@ -139,17 +165,18 @@ export default {
 
   &__subscribe-input {
     align-self: center;
+    padding-left: 12px;
+    box-sizing: border-box;
     width: 255px;
     height: 40px;
-    background: #ffffff;
+    color: #ffffff;
+    background: #4bb68c;
     border: none;
     border-radius: 8px;
-    opacity: 0.2;
   }
 
   &__subscribe-input::placeholder {
-    margin-left: 12px;
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
     line-height: 24px;
   }
@@ -186,6 +213,18 @@ export default {
 
   &__subscribe-icons--elem:last-child {
     margin-right: 0px;
+  }
+
+  &__link {
+    margin-right: 16px;
+  }
+
+  &__link:hover {
+    opacity: 0.7;
+  }
+
+  &__link:last-of-type {
+    margin-right: 0;
   }
 
   &__copyright {

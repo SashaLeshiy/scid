@@ -6,6 +6,7 @@
     <div
       v-for="(slide, idx) in slides"
       :key="idx"
+      :style="{ 'background-image': 'url(' + require(`@/assets/${slide.img}`) + ')' }"
       class="keen-slider__slide scid-carousel__slide"
     >
       <div
@@ -137,6 +138,10 @@ export default {
     }
   }
 
+  &__img {
+    width: 100%;
+  }
+
   &__text {
     position: absolute;
     margin-left: 40px;
@@ -176,7 +181,6 @@ export default {
   &__slide {
     display: flex;
     align-items: center;
-    background-image: url('@/assets/slider-photo.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

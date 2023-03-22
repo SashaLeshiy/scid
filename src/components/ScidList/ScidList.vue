@@ -12,7 +12,12 @@
       <span v-if="item.icon" class="scid-list__elem-icon">
         <img :src="require(`../../assets/contacts/${item.icon}`)" alt=""/>
       </span>
-      {{ item.text }}
+      <a
+        v-if="item.link"
+        :href="item.link"
+        class="scid-list__link"
+      >{{ item.text }}</a>
+      <span v-else>{{ item.text }}</span>
     </li>
     </ul>
   </div>
@@ -34,6 +39,12 @@ export default {
   display: flex;
   flex-direction: column;
   color: #ffffff;
+
+  @media screen and (min-width: 768px){
+    &:nth-child(4) {
+      margin-left: 36px;
+    }
+  }
 
   &__list {
     display: flex;
@@ -81,6 +92,15 @@ export default {
 
   &__elem-icon {
     margin-right: 8px;
+  }
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    opacity: 0.7;
   }
 }
 </style>

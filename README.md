@@ -1,5 +1,15 @@
 # scid
 
+## Тестовое задание
+
+Адаптивная (min 320px) верстка по макету из Figma.
+Все данные динамически подгружаются из констант.
+
+Vue, keen-slider
+
+https://scid-test.netlify.app/
+
+
 ## Project setup
 ```
 npm install

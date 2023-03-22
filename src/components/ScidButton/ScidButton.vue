@@ -40,6 +40,7 @@ export default {
 
     &:hover {
       cursor: pointer;
+      opacity: 0.7;
     }
 }
 </style>

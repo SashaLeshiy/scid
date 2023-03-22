@@ -41,6 +41,10 @@ export default {
     border-radius: 8px;
   }
 
+  &__img:hover {
+    opacity: 0.7;
+  }
+
   &__title {
     color: #000000;
     font-weight: 600;

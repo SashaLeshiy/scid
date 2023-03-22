@@ -1,30 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="scid-main" id="main">
+    <scid-header></scid-header>
+    <router-view></router-view>
+    <scid-footer></scid-footer>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import ScidHeader from '@/components/ScidHeader/ScidHeader.vue';
+import ScidFooter from './components/ ScidFooter/ScidFooter.vue';
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
+  components: {
+    ScidHeader,
+    ScidFooter,
+  },
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  data() {
+    return {
+      isMobileOpen: false,
+    };
+  },
 
-nav a.router-link-exact-active {
-  color: #42b983;
+  provide() {
+    return {
+      toggleModal() {
+        this.isModalOpen = !this.isModalOpen;
+      },
+    };
+  },
+
+};
+</script>
+
+<style lang="scss">
+.scid-main {
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 </style>

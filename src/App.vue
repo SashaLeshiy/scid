@@ -8,7 +8,7 @@
 
 <script>
 import ScidHeader from '@/components/ScidHeader/ScidHeader.vue';
-import ScidFooter from './components/ ScidFooter/ScidFooter.vue';
+import ScidFooter from '@/components/ ScidFooter/ScidFooter.vue';
 
 export default {
   name: 'App',

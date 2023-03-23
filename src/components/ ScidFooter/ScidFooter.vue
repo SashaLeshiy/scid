@@ -4,18 +4,18 @@
   <section class="scid-footer">
     <div class="scid-footer__block" >
     </div>
-    <ScidList
+    <scid-list
       :data="forContacts"
       dataTitle="Для связи"
-    ></ScidList>
-    <ScidList
+    ></scid-list>
+    <scid-list
       :data="companyData"
       dataTitle="Компания"
-    ></ScidList>
-    <ScidList
+    ></scid-list>
+    <scid-list
       :data="documents"
       dataTitle="Документы"
-    ></ScidList>
+    ></scid-list>
     <div class="scid-footer__subscribe">
       <h3 class="scid-footer__subscribe-title">Будьте в курсе</h3>
       <div class="scid-footer__subscribe-form">

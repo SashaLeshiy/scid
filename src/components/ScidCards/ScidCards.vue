@@ -4,21 +4,21 @@
       Наши услуги
     </h1>
     <div class="scid-cards__cards">
-      <ScidCard
+      <scid-card
         v-for="card in enterCards"
         :key="card.id"
         :src="card.img"
         :title="card.title"
-      ></ScidCard>
+      ></scid-card>
     </div>
-    <ScidButton
+    <scid-button
       v-if="!isAllServices"
       type="button"
       class="scid-cards__button"
       @click="allServices"
     >
       Все услуги
-    </ScidButton>
+    </scid-button>
   </section>
 </template>
 

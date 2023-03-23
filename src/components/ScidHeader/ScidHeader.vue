@@ -12,14 +12,14 @@
    </router-link>
     <div class="scid-header__right">
       <scid-navigation @toggle-modal="toggleModal"></scid-navigation>
-        <ScidButton
+        <scid-button
           type="button"
         >
           <router-link
             to="/call"
             class="scid-header__link"
           >Заказать звонок</router-link>
-        </ScidButton>
+        </scid-button>
     </div>
   </section>
     <Teleport to="body">
